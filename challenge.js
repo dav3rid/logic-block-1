@@ -1,4 +1,8 @@
-const originalSchedule = require('./input.js');
+const fs = require('fs');
+
+const originalSchedule = fs.readFileSync('input.txt', 'utf-8').split('\n');
+
+originalSchedule.sort();
 
 const guardSleepTimes = {};
 let currentGuard = 0;
